@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XploreEase - Home</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="index">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap bar">
+    <a href="index.html"><img class="logo" src="img/logo.svg" alt="XploreEase"></a>
+    <nav class="mnav" aria-label="Main">
+      <a href="index.html" class="on">Home</a>
+      <button type="button" class="dd" data-m="travel" aria-expanded="false">Book travel</button><button type="button" class="dd" data-m="holidays" aria-expanded="false">Holidays</button><button type="button" class="dd" data-m="eat" aria-expanded="false">Eat & Drink</button><button type="button" class="dd" data-m="money" aria-expanded="false">Money & Deals</button><button type="button" class="dd" data-m="account" aria-expanded="false">My XploreEase</button>
+      <button type="button" class="dots" id="dots" aria-label="Open full menu">⋯</button>
+    </nav>
+    <div class="ricons">
+      <button type="button" id="sbtn" aria-label="Search">🔍</button>
+      <a href="trips.html" aria-label="My trips"><img src="img/heart.svg" alt=""></a>
+      <a href="notifications.html" class="nb" aria-label="Notifications"><img src="img/bell.svg" alt=""><b id="nbadge" hidden></b></a>
+      <a class="btn dark" id="acct" href="login.html">Login</a>
+    </div>
+  </div>
+  <form id="sbar" class="wrap sbar" hidden><select id="sc" aria-label="Category"><option value="flights">Flights</option><option value="hotels">Hotels</option><option value="packages">Tour Packages</option><option value="trains">Trains</option><option value="cabs">Cabs</option><option value="foods">Foods</option></select><input id="sq" placeholder="Where to?" aria-label="Destination"><button class="btn">Search</button></form>
+  <div class="mega" id="mega" hidden><div class="panel" id="m-travel" hidden><div class="wrap pg"><div class="links"><a href="flights.html"><b>Flights</b><small>Compare fares on popular routes</small></a><a href="hotels.html"><b>Hotels</b><small>Stays from budget to five-star</small></a><a href="trains.html"><b>Trains</b><small>Reserve seats on top routes</small></a><a href="cabs.html"><b>Cabs</b><small>Airport transfers and city rides</small></a></div><a class="feat" href="flights.html"><img src="img/card3.svg" alt=""><b>Plan your trip</b></a></div></div><div class="panel" id="m-holidays" hidden><div class="wrap pg"><div class="links"><a href="packages.html"><b>Tour packages</b><small>Curated trips with stays and sightseeing</small></a><a href="packages.html?q=dubai"><b>Dubai getaways</b><small>Skyline, desert and beaches</small></a><a href="packages.html?q=goa"><b>Beach escapes</b><small>Goa and Bali for every budget</small></a><a href="packages.html?q=kerala"><b>Kerala backwaters</b><small>Houseboats and hill stations</small></a><a href="packages.html?q=kashmir"><b>Kashmir</b><small>Valleys, lakes and snow</small></a><a href="packages.html?q=rajasthan"><b>Royal Rajasthan</b><small>Forts, palaces and deserts</small></a></div><a class="feat" href="packages.html"><img src="img/card2.svg" alt=""><b>Top collections</b></a></div></div><div class="panel" id="m-eat" hidden><div class="wrap pg"><div class="links"><a href="foods.html"><b>Foods</b><small>Reserve tables at great restaurants</small></a><a href="foods.html?q=chennai"><b>Chennai</b><small>Thalis, dosas and filter coffee</small></a><a href="foods.html?q=mumbai"><b>Mumbai</b><small>Seafood and street food</small></a><a href="foods.html?q=dubai"><b>Dubai</b><small>Lebanese platters and shawarma</small></a><a href="foods.html?q=delhi"><b>Delhi</b><small>Kebabs and biryani</small></a></div><a class="feat" href="foods.html"><img src="img/card1.svg" alt=""><b>Craft your experiences</b></a></div></div><div class="panel" id="m-money" hidden><div class="wrap pg"><div class="links"><a href="forex.html"><b>Forex</b><small>Buy foreign currency before you fly</small></a><a href="index.html#offers"><b>Offers</b><small>Use XPLORE10 for 10% off</small></a></div><a class="feat" href="forex.html"><img src="img/card3.svg" alt=""><b>Save on every booking</b></a></div></div><div class="panel" id="m-account" hidden><div class="wrap pg"><div class="links"><a href="trips.html"><b>My trips</b><small>See and cancel your bookings</small></a><a href="notifications.html"><b>Notifications</b><small>Booking and account updates</small></a><a href="profile.html"><b>Profile</b><small>Update your details</small></a><a href="mailto:support@xplorease.example"><b>Help & Support</b><small>Talk to our team</small></a></div><a class="feat" href="trips.html"><img src="img/card1.svg" alt=""><b>Your trips in one place</b></a></div></div></div>
+</header>
+
+<div class="menu" id="menu" hidden role="dialog" aria-label="Menu">
+  <div class="wrap">
+    <div class="mh"><h2>Menu</h2><button type="button" class="cl" id="mclose">close ✕</button></div>
+    <div class="mb"><ul class="cats"><li><button type="button" data-m="travel">Book travel</button></li><li><button type="button" data-m="holidays">Holidays</button></li><li><button type="button" data-m="eat">Eat & Drink</button></li><li><button type="button" data-m="money">Money & Deals</button></li><li><button type="button" data-m="account">My XploreEase</button></li></ul><div id="mbody"></div></div>
+  </div>
+</div>
+
+<main class="wrap" id="main">
+<section class="hero2" aria-roledescription="carousel" aria-label="Featured destinations">
+  <div class="slides"><img class="on" src="img/hero1.svg" alt=""><img src="img/hero2.svg" alt=""><img src="img/hero3.svg" alt=""><img src="img/hero4.svg" alt=""></div>
+  <div class="hshade"></div>
+  <div class="hcopy"><h1>Plan your next getaway</h1><p>Flights, hotels, trains, cabs and holidays in one place. Search, book and pay in a few minutes.</p><a class="btn white" href="packages.html">Start planning ›</a></div>
+  <div class="hctl"><button type="button" id="hp" aria-label="Pause slideshow">❚❚</button></div>
+</section>
+
+<section class="plan">
+  <img src="img/card3.svg" alt="">
+  <div><h2>Plan your trip</h2><p>Search flights, hotels, holidays, trains, cabs and food in one go.</p>
+    <form id="hf" class="hf2"><select id="hc" aria-label="Category"><option value="flights">Flights</option><option value="hotels">Hotels</option><option value="packages">Tour Packages</option><option value="trains">Trains</option><option value="cabs">Cabs</option><option value="foods">Foods</option></select><input id="hq" placeholder="Where to?" aria-label="Destination"><button class="btn">Submit</button></form></div>
+</section>
+
+<h2>Quick guide for exploring with XploreEase</h2>
+<section class="qg"><a class="qc" href="flights.html"><img src="img/qg1.svg" alt=""><span>Fly anywhere</span><i>⌄</i></a><a class="qc" href="hotels.html"><img src="img/qg2.svg" alt=""><span>Stay in style</span><i>⌄</i></a><a class="qc" href="packages.html"><img src="img/qg3.svg" alt=""><span>Holidays made easy</span><i>⌄</i></a><a class="qc" href="trains.html"><img src="img/qg4.svg" alt=""><span>Get around with ease</span><i>⌄</i></a><a class="qc" href="foods.html"><img src="img/qg5.svg" alt=""><span>A melting pot of flavours</span><i>⌄</i></a></section>
+
+<section class="dyk">
+  <img src="img/card2.svg" alt="">
+  <div>
+    <small>Did you know</small>
+    <div class="ds"><h2>You can cancel anytime from My Trips</h2><p>Changed your plans? Open My Trips and cancel a booking in one click. The refund goes back to your original payment method.</p></div>
+    <div class="ds" hidden><h2>Popular trains sell out fast</h2><p>Reserve your seats as soon as your dates are fixed, then add a cab and a restaurant table for the same trip.</p></div>
+    <div class="ds" hidden><h2>One coupon works on every booking</h2><p>Enter XPLORE10 at checkout for 10% off, up to ₹1,500, on flights, hotels, packages and more.</p></div>
+  </div>
+  <div class="arr"><button type="button" id="dprev" aria-label="Previous tip">‹</button><button type="button" id="dnext" aria-label="Next tip">›</button></div>
+</section>
+
+<section class="disc" id="offers">
+  <div><h2>Weekend getaways in 48 hours</h2><p>Short on time? Pick a package to Goa, Dubai or Kerala and be on your way this weekend. Use code <b>XPLORE10</b> for 10% off.</p><a class="more" href="packages.html">Learn more ›</a></div>
+  <img src="img/discover.svg" alt="">
+</section>
+
+<section class="stay" id="stay">
+  <div><h2>Stay updated</h2><p>Get the latest travel updates and offers.</p><div class="chips"><button type="button" class="chip">Flights</button><button type="button" class="chip">Hotels</button><button type="button" class="chip">Packages</button><button type="button" class="chip">Trains</button><button type="button" class="chip">Cabs</button><button type="button" class="chip">Food</button><button type="button" class="chip">Forex</button><button type="button" class="chip">Offers</button><button type="button" class="chip">Weekend trips</button></div>
+    <form id="sub" class="sub"><input type="email" placeholder="Your email address" aria-label="Email address"><button class="btn" disabled>Subscribe</button></form></div>
+  <div><h3>Download our apps</h3><p>Book on the go.</p><button type="button" class="applink">Get XploreEase</button></div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap fg">
+    <div><img class="logo" src="img/logo.svg" alt="XploreEase"><p>XploreEase is a demo travel booking project. Search flights, hotels, tour packages, trains, cabs and restaurants, then book and pay in one place.</p>
+      <div class="soc2"><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Instagram">ig</a><a href="#" aria-label="X">x</a><a href="#" aria-label="YouTube">yt</a></div></div>
+    <div><h4>Popular links</h4><a href="flights.html">Flights</a><a href="hotels.html">Hotels</a><a href="packages.html">Tour packages</a><a href="trains.html">Trains</a><a href="cabs.html">Cabs</a></div>
+    <div><h4>Helpful information</h4><a href="trips.html">My trips</a><a href="notifications.html">Notifications</a><a href="profile.html">Profile</a><a href="forex.html">Forex</a><a href="mailto:support@xplorease.example">Help &amp; Support</a></div>
+    <div><h4>Explore</h4><a href="index.html">Home</a><a href="foods.html">Foods</a><a href="index.html#offers">Offers</a><a href="more.html">More</a></div>
+  </div>
+  <div class="wrap legal"><span><a href="#">Terms of use</a><a href="#">Privacy Notice</a><a href="#">Cookie notice</a><a href="#">Sitemap</a></span><span>Demo project · Bookings and payments are simulated, no real charges are made.</span></div>
+</footer>
+
+<div class="cookie" id="cookie" hidden>
+  <span>We respect your privacy and use cookies to improve your browsing experience. <a href="#">Learn more about cookies</a></span>
+  <span><button type="button" class="cl" data-ck="custom">Customise</button> <button type="button" class="btn" data-ck="all">Accept all</button></span>
+</div>
+<div id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
