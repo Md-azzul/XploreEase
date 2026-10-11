@@ -1,0 +1,4 @@
+# Plain static site: no build step, publish the folder containing index.html.
+[build]
+  publish = "Explore Ease"
+  command = "echo 'No build step required for static site'"
